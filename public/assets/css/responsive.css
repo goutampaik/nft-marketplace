@@ -1,0 +1,47 @@
+@media screen and (max-width: 1350px) {
+    h1.hero-title {
+        font-size: 40px;
+    }
+    h1.hero-title {
+        font-size: 40px;
+    }
+    .banner {
+        padding-top: 97px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .banner-img {
+        display: none;
+    }
+    .banner-img-right {
+        display: none;
+    }
+    .grid-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* =============== Top- seller ============ */
+@media screen and (max-width: 992px) {
+    .create-left{
+        width: 100%;
+    }
+    .create-right{
+        display: none;
+    }
+}
+/* =============== mission ============ */
+@media screen and (max-width: 500px) {
+    .mission-timer{
+        margin: 0 5px;
+        background-color: #ffffff;
+        color: #000;
+        padding: 5px 10px;
+        text-align: center;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    .mission-timer p{
+        font-size: 12px;
+    }
+}
