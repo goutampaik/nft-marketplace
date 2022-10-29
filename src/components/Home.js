@@ -16,8 +16,8 @@ function Home() {
               <div className="banner-content">
                 <div className="banner-content-inner">
                   <h1 className="hero-title">
-                    {/* Discover collect And Sell your favorite digital NTFs */}
-                    Goutam Paik
+                    Discover collect And Sell your favorite digital NTFs
+            
                   </h1>
                   <p className="banner-des">
                     Quis autem vel eum iure reprehenderit qui in ea voluptates
