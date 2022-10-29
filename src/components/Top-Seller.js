@@ -1,5 +1,5 @@
 import React from "react";
-
+import Subscribe from "./Subscribe";
 function TopSeller() {
   return (
     <>
@@ -338,6 +338,7 @@ function TopSeller() {
         </div>
       </section>
       {/* <!-- ================ Create Item end============ --> */}
+      <Subscribe />
     </>
   );
 }

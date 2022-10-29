@@ -1,5 +1,5 @@
 import React from "react";
-
+import Subscribe from "./Subscribe";
 function Mission() {
   return (
     <>
@@ -208,6 +208,7 @@ function Mission() {
         </div>
       </section>
       {/* <!-- ===========mission end================== --> */}
+      <Subscribe />
     </>
   );
 }

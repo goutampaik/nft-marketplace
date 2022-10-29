@@ -4,6 +4,17 @@ import Footer from "./components/Footer";
 import Mint from "./components/Mint";
 import Mission from "./components/Mission";
 import TopSeller from "./components/Top-Seller";
+import AllAuthor from "./components/All-Author";
+import Blog from "./components/Blog";
+import WalletConnect from "./components/Wallet-Connect";
+import BlogDetails from "./components/Blog-Details";
+import Collection from "./components/Collection";
+import Sellers from "./components/Sellers";
+import Dashboard from "./components/users/Dashboard";
+import Bids from "./components/users/Bids";
+import ListUsers from "./components/users/List-Users";
+import Saved from "./components/users/Saved";
+import UserWallet from "./components/users/User-Wallet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +34,39 @@ function App() {
           </Route>
           <Route exact path="/top-seller">
             <TopSeller />
+          </Route>
+          <Route exact path="/all-author">
+            <AllAuthor />
+          </Route>
+          <Route exact path="/blog">
+            <Blog />
+          </Route>
+          <Route exact path="/wallet-connect">
+            <WalletConnect />
+          </Route>
+          <Route exact path="/blog-details">
+            <BlogDetails />
+          </Route>
+          <Route exact path="/collection">
+            <Collection />
+          </Route>
+          <Route exact path="/sellers">
+            <Sellers />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route exact path="/bids">
+            <Bids />
+          </Route>
+          <Route exact path="/list-users">
+            <ListUsers />
+          </Route>
+          <Route exact path="/user-wallet">
+            <UserWallet />
+          </Route>
+          <Route exact path="/saved">
+            <Saved />
           </Route>
         </Switch>
         <Footer />

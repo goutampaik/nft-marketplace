@@ -620,8 +620,10 @@ a.cat-name {
 /*-- ===========mission end================== */
 
 /*--==================== Author ============== */
+.blank-100 {
+  height: 120px;
+}
 .author-warrper {
-  margin-top: 50px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -770,14 +772,17 @@ a.cat-name {
   background-color: #09c8c8;
   color: #ffffff;
 }
-.read-more-btn{
+.read-more-btn {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background:none;
+  background: none;
   color: #616161;
 }
-.read-more-btn:hover{
-  border: 1px solid #4E77DD ;
-  background: linear-gradient(141.86deg, #10C0CA 21.15%, #4E77DD 95.39%);
+.read-more-btn:hover {
+  border: 1px solid #4e77dd;
+  background: linear-gradient(141.86deg, #10c0ca 21.15%, #4e77dd 95.39%);
+}
+.read-more-btn a{
+  color: #4a4a4a;
 }
 button.athor-items:hover svg path {
   fill: #fff;
@@ -818,13 +823,13 @@ button.athor-items:hover svg path {
   justify-content: center;
   top: -70px;
   padding: 14px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 50%;
   box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
   transition: 0.4s;
 }
-.wallet-logo:hover{
-  background-color: #3772FF;
+.wallet-logo:hover {
+  background-color: #3772ff;
 }
 .card-img img {
   width: 100%;
@@ -841,7 +846,8 @@ button.athor-items:hover svg path {
   justify-content: center;
 }
 
-span {}
+span {
+}
 
 .wallet-card span {
   font-size: 25px;
@@ -878,8 +884,6 @@ span {}
   gap: 0 7px;
 }
 
-
-
 .comment-img {
   position: relative;
   display: flex;
@@ -900,7 +904,7 @@ span {}
   font-size: 25px;
   font-weight: 700;
 }
-.comment-left p{
+.comment-left p {
   font-size: 16px;
   color: #616161;
 }
@@ -946,7 +950,6 @@ span {}
 .popular-tag-title h4 {
   font-size: 20px;
   font-weight: 700;
-
 }
 
 .popular-tags button {
@@ -958,15 +961,15 @@ span {}
   color: #000;
   margin-top: 20px;
 }
-.popular-tags button:hover{
-  background-color: #3772FF;
+.popular-tags button:hover {
+  background-color: #3772ff;
 }
 
 .comment-profile {
   display: flex;
   align-items: flex-start;
   gap: 0 20px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
   border-radius: 12px;
   padding: 25px;
@@ -1048,11 +1051,11 @@ button.reply-btn {
   transition: 0.5s;
   margin-top: 10px;
 }
-button.reply-btn:hover{
-  color: #6345ED;
+button.reply-btn:hover {
+  color: #6345ed;
 }
-button.reply-btn:hover svg path{
-  fill: #6345ED;
+button.reply-btn:hover svg path {
+  fill: #6345ed;
 }
 .people-commnets-item-reply {
   display: flex;
@@ -1061,13 +1064,13 @@ button.reply-btn:hover svg path{
   left: 83px;
   width: 80%;
 }
-.people-reply button{
+.people-reply button {
   border: none;
   outline: none;
 }
 .leave-reply {
   margin: 50px 0 100px 0;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 4px 4px 60px rgba(55, 114, 255, 0.1);
   border-radius: 12px;
   padding: 50px;
@@ -1084,11 +1087,10 @@ button.reply-btn:hover svg path{
   border-radius: 5px;
   transition: 0.4s;
 }
-.leave-input input:hover{
-  
-background: rgba(99, 69, 237, 0.1);
+.leave-input input:hover {
+  background: rgba(99, 69, 237, 0.1);
 }
-.leave-input::placeholder{
+.leave-input::placeholder {
   font-weight: 700;
   color: #000;
 }
@@ -1103,21 +1105,19 @@ background: rgba(99, 69, 237, 0.1);
   border-radius: 5px;
 }
 
-
 .leave-text-area {
   margin-top: 40px;
 }
-.leave-text-area
-.leave-reply-title {
+.leave-text-area .leave-reply-title {
   margin-bottom: 30px;
 }
-.leave-text-area textarea{
+.leave-text-area textarea {
   width: 100%;
   border: 1px solid rgba(99, 69, 237, 0.1);
-border-radius: 5px;
-padding: 20px 30px;
+  border-radius: 5px;
+  padding: 20px 30px;
 }
-.send-reply button{
+.send-reply button {
   margin-top: 30px;
   width: 50%;
 }
@@ -1170,24 +1170,24 @@ button.serach-btn {
   justify-content: space-between;
   align-items: center;
 }
-.share-post-social-link{
+.share-post-social-link {
   margin-top: 20px;
 }
-.share-post-social-link .social-ul a{
+.share-post-social-link .social-ul a {
   background: rgba(99, 69, 237, 0.07);
   border-radius: 7px;
   color: #000;
 }
-.share-post-social-link .social-ul a:hover{
+.share-post-social-link .social-ul a:hover {
   color: #fff;
-  background-color: #3772FF;
+  background-color: #3772ff;
 }
 .profile-social-area .social-ul a {
   background: none;
   color: #808080;
 }
-.profile-social-area .social-ul a:hover{
- color: #3772FF;
+.profile-social-area .social-ul a:hover {
+  color: #3772ff;
 }
 
 .recent-news-title {
@@ -1204,23 +1204,23 @@ button.serach-btn {
   border-radius: 7px;
   padding: 20px;
 }
-.popular-tag{
+.popular-tag {
   border: 2px solid rgba(99, 69, 237, 0.1);
   margin-top: 30px;
 }
-.popular-tag button:hover{
-  background: linear-gradient(135.31deg, #AB0BF2 18.98%, #F9737A 85.61%);
-border-radius: 5px;
+.popular-tag button:hover {
+  background: linear-gradient(135.31deg, #ab0bf2 18.98%, #f9737a 85.61%);
+  border-radius: 5px;
 }
 /* ================ Comments end==================== */
 /* ================ chain==================== */
 .chain-content {
-  background: #FFFFFF;
-  border: 1px solid #ECE9FD;
+  background: #ffffff;
+  border: 1px solid #ece9fd;
   margin-bottom: 50px;
 }
 
-.item-btn button{
+.item-btn button {
   border: none;
   padding: 20px 20px;
   background: none;
@@ -1229,7 +1229,7 @@ border-radius: 5px;
   outline: none;
   overflow: hidden;
 }
-.item-btn{
+.item-btn {
   width: 100%;
   transition: 0.4s;
   padding: 0 30px;
@@ -1237,19 +1237,19 @@ border-radius: 5px;
 .item-btn:hover {
   background: rgba(130, 44, 255, 0.35);
 }
-.items-card{
+.items-card {
   margin-bottom: 50px;
 }
 /* ================ chain end==================== */
 
 /* ============ Best seller ================== */
-.best-seller-title{
+.best-seller-title {
   width: 100%;
   display: f;
   margin-bottom: 50px;
   justify-content: space-between;
 }
-.seller-card-item{
+.seller-card-item {
   background: #fff;
   padding: 20px;
   display: flex;
@@ -1267,18 +1267,18 @@ border-radius: 5px;
   height: 100px;
   border-radius: 50%;
 }
-.card-titles span{
+.card-titles span {
   font-weight: 700;
 }
-.card-titles p{
+.card-titles p {
   font-size: 15px;
 }
-.follow button{
+.follow button {
   background: rgba(99, 69, 237, 0.15);
   color: #000;
 }
-.follow button:hover{
-  background: linear-gradient(132.41deg, #F8727B 18.03%, #AB0BF2 81.29%);
+.follow button:hover {
+  background: linear-gradient(132.41deg, #f8727b 18.03%, #ab0bf2 81.29%);
 }
 .seller-radios {
   display: flex;
@@ -1291,30 +1291,28 @@ border-radius: 5px;
 button.radios {
   width: 15px;
   height: 15px;
-  border: 3px solid #6345ED;
+  border: 3px solid #6345ed;
   border-radius: 50%;
   transition: 0.4s;
 }
 button.radios:hover {
   transform: scale(1.5);
   background-color: #fff;
-  
 }
 /* ============ Best seller end================== */
 /* ============ top sellers end================== */
-.top-follow{
+.top-follow {
   transform: rotateZ(90deg);
 }
-.tops-items img{
+.tops-items img {
   width: 100px;
   height: 100px;
-  
 }
-.top-price{
+.top-price {
   color: #616161 !important;
   font-weight: 400 !important;
 }
-.star img{
+.star img {
   width: 15px;
   height: 15px;
 }
@@ -1328,27 +1326,27 @@ button.hot-item {
   border-radius: 50%;
   transition: 0.4s;
 }
-button.hot-item:hover{
-  background-color: #3772FF;
+button.hot-item:hover {
+  background-color: #3772ff;
 }
 .filter-menu svg {
   width: 16px;
   height: 16px;
 }
-button.hot-item:hover svg path{
+button.hot-item:hover svg path {
   fill: #fff;
 }
 .hot-img {
   width: 60px;
   height: 60px;
   bottom: -31px;
-  border: 2px solid #26A5D1;
+  border: 2px solid #26a5d1;
   border-radius: 40px;
 }
 /* ============ Hot collection end================== */
 
 /* ==================== User Admin =========================== */
-.user-admin-warrper{
+.user-admin-warrper {
   display: flex;
 }
 .user-category-item {
@@ -1357,9 +1355,8 @@ button.hot-item:hover svg path{
 
 .user-admin-left {
   padding: 50px 30px;
-  background: #F4F6F9;
+  background: #f4f6f9;
   width: 25%;
-
 }
 
 .user-head-title {
@@ -1391,7 +1388,7 @@ button.hot-item:hover svg path{
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  background: #5AE6BC;
+  background: #5ae6bc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1432,30 +1429,30 @@ button.hot-item:hover svg path{
 }
 
 .user-category-item a {
-  color: #555D68;
+  color: #555d68;
   font-size: 20px;
   font-weight: 700;
 }
 
 .user-title-head p {
-  color: #4A4A4A;
+  color: #4a4a4a;
   font-weight: 600;
 }
 
 .user-title-head span {
-  color: #FFC700;
+  color: #ffc700;
 }
 
 .user-category-item a:hover {
-  color: #6345ED;
+  color: #6345ed;
 }
-.user-category-item svg:hover path{
-  fill: #6345ED;
+.user-category-item svg:hover path {
+  fill: #6345ed;
 }
-.user-content{
+.user-content {
   width: 75%;
   padding: 50px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 .user-header-content {
   display: flex;
@@ -1475,59 +1472,67 @@ button.hot-item:hover svg path{
 }
 
 .user-content-left-site {
-  background: #F9F9F9;
+  background: #f9f9f9;
   border-radius: 31px;
   padding: 10px 20px;
 }
-button.creator {background: #FFFFFF;box-shadow: 0px 4px 4px rgba(37, 45, 48, 0.04);border-radius: 31px;padding: 7px 22px;border: none;color: #14161B;font-weight: 700;}
+button.creator {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(37, 45, 48, 0.04);
+  border-radius: 31px;
+  padding: 7px 22px;
+  border: none;
+  color: #14161b;
+  font-weight: 700;
+}
 
 .user-content-left-site span {
-    color: #B0B1BC;
-    font-weight: 500;
+  color: #b0b1bc;
+  font-weight: 500;
 }
 
 .user-content-right-site {
-    display: flex;
-    align-items: center;
-    gap: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
 }
 
 .user-setting a {
-    width: 70px;
-    height: 70px;
-    padding: 10px;
-    border: 2px solid #F9F9F9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border: 2px solid #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .user-notification a {
-    width: 70px;
-    height: 70px;
-    padding: 10px;
-    border: 2px solid #F9F9F9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    position: relative;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border: 2px solid #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
 }
 
 .notification-count {
-    position: absolute;
-    top: 0;
-    right: -14px;
-    background: #FC0380;
-    border-radius: 14px;
-    color: #ffffff;
-    font-weight: 700;
-    height: 30px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -14px;
+  background: #fc0380;
+  border-radius: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  height: 30px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .user-tranding-title {
   display: flex;
@@ -1545,15 +1550,15 @@ button.creator {background: #FFFFFF;box-shadow: 0px 4px 4px rgba(37, 45, 48, 0.0
 }
 
 .user-trading-left a p {
-  color: #6345ED;
+  color: #6345ed;
   font-weight: 500;
 }
 
 .user-trading-left span {
   padding: 3px 9px;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   border-radius: 14px;
-  color: #6345ED;
+  color: #6345ed;
   font-weight: 600;
 }
 .user-product {
@@ -1574,24 +1579,23 @@ button.creator {background: #FFFFFF;box-shadow: 0px 4px 4px rgba(37, 45, 48, 0.0
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.user-featured-creator-title .sec-title-left h2{
+.user-featured-creator-title .sec-title-left h2 {
   font-weight: 700;
 }
 
-
 .user-featured-creator-title .sec-title-right a {
-  color: #6345ED;
+  color: #6345ed;
   font-weight: 500;
 }
-.user-admin-author-item{
+.user-admin-author-item {
   background: none !important;
   border: none;
   transition: 0.4s;
   margin-bottom: 30px;
 }
-.user-admin-author-item:hover{
-  background: #FFFFFF;
-box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
+.user-admin-author-item:hover {
+  background: #ffffff;
+  box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
 }
 /* ==================== User Admin End=========================== */
 
@@ -1599,8 +1603,8 @@ box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
 .bid-card {
   display: flex;
   gap: 0 20px;
-  background: #FFFFFF;
-  border: 1px solid #DEDEDE;
+  background: #ffffff;
+  border: 1px solid #dedede;
   border-radius: 20px;
   padding: 15px;
   margin-bottom: 30px;
@@ -1609,18 +1613,18 @@ box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
 .bid-color-round {
   width: 30px;
   height: 30px;
-  background: #F4462E;
+  background: #f4462e;
   border-radius: 50%;
 }
-.yellow-round{
-  background: #FFBB00 !important;
+.yellow-round {
+  background: #ffbb00 !important;
 }
-.navi-bule-round{
-  background: #6F4EF2 !important;
+.navi-bule-round {
+  background: #6f4ef2 !important;
 }
-.price-time{
+.price-time {
   background: rgba(113, 200, 77, 0.3) !important;
-  color: #71C84D !important;
+  color: #71c84d !important;
 }
 .bid-card-content {
   display: flex;
@@ -1632,12 +1636,12 @@ box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
 .bid-card-title h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #14161B;
+  color: #14161b;
 }
 
 .bid-card-title span {
   font-size: 15px;
-  color: #B0B1BC;
+  color: #b0b1bc;
 }
 
 .bids-dis-card span {
@@ -1645,7 +1649,7 @@ box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
   border-radius: 10px;
   padding: 5px 10px;
   margin-right: 10px;
-  color: #F4462E;
+  color: #f4462e;
   font-weight: 700;
   font-size: 15px;
 }
@@ -1685,7 +1689,7 @@ box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
 }
 
 .recent-select-item {
-  border: 2px solid #E2E3E3;
+  border: 2px solid #e2e3e3;
   border-radius: 10px;
   padding: 5px;
 }
@@ -1715,13 +1719,13 @@ box-shadow: 4px 4px 60px rgba(99, 69, 237, 0.15);
 
 .item-list-right h4 {
   font-size: 17px;
-  color: #555D68;
+  color: #555d68;
   font-weight: 600;
 }
 
 .item-list-right p {
   font-size: 15px;
-  color: #555D68;
+  color: #555d68;
   font-weight: 400;
 }
 .recent-action-btn {
@@ -1743,32 +1747,32 @@ button.action-delete-btn {
   height: 35px;
   background: #f4483057;
 }
-table tbody tr td{
+table tbody tr td {
   font-weight: 600;
-  color:  #555D68;
+  color: #555d68;
   font-size: 17px;
 }
 /* ============= recent- bid end=====================  */
 
 /* ================= list-user =================== */
-.list-rank-count span{
+.list-rank-count span {
   font-weight: 700;
   padding-right: 10px;
 }
 
 .list-user-item-btn button {
-    border: 1px solid #C2C2C2;
-    border-radius: 10px;
-    width: 100px;
-    height: 48px;
-    background: #ffffff;
-    font-weight: 700;
-    color: #a8a9ac;
+  border: 1px solid #c2c2c2;
+  border-radius: 10px;
+  width: 100px;
+  height: 48px;
+  background: #ffffff;
+  font-weight: 700;
+  color: #a8a9ac;
 }
 
 .list-search-btn button {
-    border-radius: 10px;
-    padding: 11px 30px;
+  border-radius: 10px;
+  padding: 11px 30px;
 }
 .list-read-more {
   display: flex;
@@ -1791,17 +1795,17 @@ table tbody tr td{
 .saved-item-btn button {
   width: 100px;
   height: 50px;
-  background: #F3F5F9;
+  background: #f3f5f9;
   border-radius: 10px;
   border: none;
   font-size: 18px;
   font-weight: 700;
   transition: 0.4s;
-  color: #B0B1BC;
+  color: #b0b1bc;
 }
-.saved-item-btn button:hover{
+.saved-item-btn button:hover {
   color: #ffffff;
-  background: linear-gradient(180deg, #09C8C8 0%, #4E77DD 100%);
+  background: linear-gradient(180deg, #09c8c8 0%, #4e77dd 100%);
 }
 
 .saved-item-price-area {
@@ -1810,22 +1814,21 @@ table tbody tr td{
   margin-top: 8px;
   justify-content: space-between;
 }
-.saved-item-love{
+.saved-item-love {
   position: absolute;
   top: 20px;
   right: 20px;
   width: 40px;
-  height: 40px;  
-  background: #FFFFFF;
+  height: 40px;
+  background: #ffffff;
   padding: 3px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.saved-item-love img{
+.saved-item-love img {
   width: 100%;
-
 }
 .saved-item-header {
   display: flex;

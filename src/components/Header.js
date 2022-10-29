@@ -30,34 +30,43 @@ function Header() {
                   </a>
                 </li>
                 <li class="nav-list">
-                  <a href="./" class="nav-link">
-                    Activity
-                  </a>
+                  <Link class="nav-link" to="Mission">
+                  Activity
+                  </Link>
                 </li>
                 <li class="nav-list">
-                  <a href="./" class="nav-link">
+                  <Link class="nav-link" to="Wallet-Connect">
                     Wallet
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-list">
-                  <a href="./" class="nav-link">
-                    Explore
-                  </a>
+                  <Link class="nav-link" to="All-Author">
+                    Author
+                  </Link>
                 </li>
+
                 <li class="nav-list">
-                  <a href="./" class="nav-link">
+                  <Link class="nav-link" to="Blog">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-list nav-pages">
                   {" "}
-                  <a class="nav-link">Pages</a>
+                  <a class="nav-link">
+                    Pages <span>v</span>
+                  </a>
                   <ul className="nav-pages-list">
                     <li>
                       <Link to="Top-Seller">Top Sellers</Link>
                     </li>
                     <li>
-                      <Link to="Mission">Mission</Link>
+                      <Link to="Collection">Collection</Link>
+                    </li>
+                    <li>
+                      <Link to="Sellers">Sellers</Link>
+                    </li>
+                    <li>
+                      <Link to="Dashboard">Dashboard</Link>
                     </li>
                   </ul>
                 </li>
