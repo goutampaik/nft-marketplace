@@ -4,7 +4,9 @@
   width: 24% !important;
   gap: 20px !important;
 }
-
+.hero-button-area a {
+  margin: 0 5px !important;
+}
 /* Navigation Section  */
 nav.navigation {
   display: flex;

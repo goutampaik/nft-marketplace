@@ -1,58 +1,59 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 function Header() {
+
   return (
     <>
-      <header class="header">
-        <div class="container">
-          <nav class="navigation">
-            <div class="logo"></div>
-            <div class="search-box">
-              <form method="post" class="search-form">
+      <header className="header">
+        <div className="container">
+          <nav className="navigation">
+            <div className="logo"></div>
+            <div className="search-box">
+              <form method="post" className="search-form">
                 <input
                   type="text"
-                  class="form-control search-input"
+                  className="form-control search-input"
                   placeholder="Search..."
                 />
-                <button class="search-btn" type="submit">
-                  <i class="icofont-search-1"></i>
+                <button className="search-btn" type="submit">
+                  <i className="icofont-search-1"></i>
                 </button>
               </form>
             </div>
-            <div class="menu">
-              <div class="close-menu">
-                <i class="icofont-close"></i>
+            <div className="menu">
+              <div className="close-menu">
+                <i className="icofont-close"></i>
               </div>
-              <ul class="menu-nav-ul">
-                <li class="nav-list">
-                  <a href="./" class="nav-link">
+              <ul className="menu-nav-ul">
+                <li className="nav-list">
+                  <a href="./" className="nav-link">
                     Home
                   </a>
                 </li>
-                <li class="nav-list">
-                  <Link class="nav-link" to="Mission">
-                  Activity
+                <li className="nav-list">
+                  <Link className="nav-link" to="Mission">
+                    Activity
                   </Link>
                 </li>
-                <li class="nav-list">
-                  <Link class="nav-link" to="Wallet-Connect">
+                <li className="nav-list">
+                  <Link className="nav-link" to="Wallet-Connect">
                     Wallet
                   </Link>
                 </li>
-                <li class="nav-list">
-                  <Link class="nav-link" to="All-Author">
+                <li className="nav-list">
+                  <Link className="nav-link" to="All-Author">
                     Author
                   </Link>
                 </li>
 
-                <li class="nav-list">
-                  <Link class="nav-link" to="Blog">
+                <li className="nav-list">
+                  <Link className="nav-link" to="Blog">
                     Blog
                   </Link>
                 </li>
-                <li class="nav-list nav-pages">
+                <li className="nav-list nav-pages">
                   {" "}
-                  <a class="nav-link">
+                  <a className="nav-link">
                     Pages <span>v</span>
                   </a>
                   <ul className="nav-pages-list">
@@ -71,19 +72,19 @@ function Header() {
                   </ul>
                 </li>
               </ul>
-              <a href="./" class="custom-btn l-none mt-3">
+              <a href="./" className="custom-btn l-none mt-3">
                 <span>Connect Wallet</span>
               </a>
             </div>
-            <div class="wallet-btn m-none">
-              <a href="./" class="custom-btn-alt">
+            <div className="wallet-btn m-none">
+              <a href="./" className="custom-btn-alt">
                 <span>
-                  <i class="icofont-wallet"></i> Connect Wallet
+                  <i className="icofont-wallet"></i> Connect Wallet
                 </span>
               </a>
             </div>
-            <div class="show-nav">
-              <i class="icofont-navigation-menu"></i>
+            <div className="show-nav" >
+              <i className="icofont-navigation-menu"></i>
             </div>
           </nav>
         </div>
