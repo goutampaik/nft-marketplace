@@ -1,12 +1,21 @@
 @import url(./default.css);
-/* ===============Banner================= */
+/* ===============Intro================= */
 
-.banner {
+.intro {
   padding-top: 175px;
+  /* background: var(--gradient-color-1); */
 }
-
-.banner-content-inner {
-  text-align: center;
+.intro-inner{
+  display: flex;
+}
+.intro-left{
+  width: 50%;
+}
+.intro-right{
+  width: 50%;
+}
+.intro-right img{
+  width: 100%;
 }
 
 .banner-img-right {
@@ -37,7 +46,7 @@
 h1.hero-title {
   font-size: 63px;
   font-weight: 700;
-  color: var(--second-color);
+  color: var(--title-color);
   margin-bottom: 20px;
 }
 
@@ -76,7 +85,7 @@ p.banner-des {
 a.product-name {
   font-size: 22px;
   font-weight: 700;
-  color: var(--second-color);
+  color: var(--title-color);
   transition: 0.3s;
 }
 
@@ -103,7 +112,7 @@ a.product-name:hover {
 .author-name a {
   font-size: 18px;
   font-weight: 700;
-  color: var(--main-color);
+  color: var(--gp-blue);
   line-height: 18px;
 }
 
@@ -131,7 +140,7 @@ p.author-title {
 .section-title h2 {
   font-size: var(--title-font);
   font-weight: 700;
-  color: var(--second-color);
+  color: var(--title-color);
 }
 
 .product-card:hover .product-image a {
@@ -140,7 +149,7 @@ p.author-title {
 }
 
 .timer-area {
-  background: linear-gradient(130.35deg, #ad0fed 17.35%, #f97379 78.23%);
+  background: var(--main-color);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -159,7 +168,7 @@ p.author-title {
 }
 
 .cp-type span {
-  background: var(--main-color);
+  background: var(--gp-blue);
   color: var(--white-color);
   padding: 5px 14px;
   border-radius: 8px;
@@ -199,7 +208,7 @@ p.author-title {
 
 .nft-name-price a {
   padding-left: 0;
-  color: var(--second-color);
+  color: var(--title-color);
   font-weight: 700;
 }
 
@@ -242,7 +251,7 @@ p.author-title {
 .popular-cat-details h4 a {
   font-weight: 700;
   font-size: 22px;
-  color: var(--second-color);
+  color: var(--title-color);
   transition: 0.3s;
 }
 
@@ -260,7 +269,7 @@ p.author-title {
 a.owner-name {
   font-weight: 700;
   font-size: 15px;
-  color: var(--main-color);
+  color: var(--gp-blue);
 }
 
 .cat-owner-name {
@@ -310,7 +319,7 @@ a.owner-name {
 a.cat-name {
   font-weight: 700;
   font-size: 18px;
-  color: var(--second-color);
+  color: var(--title-color);
   transition: 0.3s;
   margin-bottom: 5px;
 }
@@ -322,7 +331,7 @@ a.cat-name {
 /* ==========================newsletter===================== */
 
 .ns-wrapper {
-  background: linear-gradient(132.71deg, #09c8c8 18.12%, #4e77dd 81.74%);
+  background: var(--gradient-color-2);
   border-radius: 30px;
   padding: 50px;
 }

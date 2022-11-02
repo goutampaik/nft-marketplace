@@ -11,14 +11,32 @@
 }
 
 @media screen and (max-width: 992px) {
-  .banner-img {
-    display: none;
+  .intro {
+    padding-top: 125px;
   }
-  .banner-img-right {
-    display: none;
+  .intro-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .grid-row {
-    grid-template-columns: 1fr;
+  .intro-left{
+    width: 100%;
+  }
+  .hero-title{
+    text-align: center;
+  }
+  .banner-des{
+    text-align: center;
+  }
+  .hero-button-area{
+    text-align: center;
+  }
+  .intro-right{
+    width: 100%;
+  }
+  .intro-right img{
+    width: 100%;
   }
 }
 /* =============== Top- seller ============ */
@@ -521,4 +539,22 @@ width: 80%;
   border: none;
   width: 80%;
 }
+}
+/* =============== Swiper Slider ============ */
+@media screen and (max-width: 912px){
+  .section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  .swiper-slide{
+    width: 100% !important;
+  }
+  .opensea-logo{
+    display: block;
+  }
+  .opensea-logo img{
+    width: 100px;
+  }
 }

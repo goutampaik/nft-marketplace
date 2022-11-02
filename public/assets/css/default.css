@@ -1,94 +1,115 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    outline: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
-
 
 /*===== VARIABLES CSS =====*/
 
 :root {
-    /*========== Colors ==========*/
-    --main-color: #6345ed;
-    --second-color: #14161b;
-    --black-color: #000000;
-    --title-color: #393939;
-    --white-color: #ffffff;
-    /*========== Font and typography ==========*/
-    --body-font: "Urbanist", sans-serif;
-    --sec-title-font: 25px;
-    --p-font: 18px;
-    --m-title: 30.25px;
-    --l-title: 36.79px;
-    --p-font-height: 150%;
-    --lp-font-height: 150%;
-    --title-font: 42px;
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semi-bold: 600;
-    /*========== Margin ==========*/
-    --mb-1: 0.5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
+  /*========== Colors ==========*/
+  --main-color: #eb4d3d;
+  --second-color: #fefb41;
+  --gp-blue:#6345ED;
+  --footer-bg:#64150D;
+  --gradient-color-1: radial-gradient(
+    circle,
+    rgba(235, 77, 61, 0.23853291316526615) 100%,
+    rgba(254, 251, 65, 0.21052170868347342) 100%
+  );
+  --gradient-color-2: linear-gradient(90deg, #eb4d3d -1.96%, #fefb41 100.01%);
+  --gradient-color-3: linear-gradient(
+    to right,
+    #eb4d3d,
+    #f17518,
+    #e99e00,
+    #d1c600,
+    #a8eb12
+  );
+
+  --title-color: #14161b;
+  --nav-color: #14161b;
+  --text-second-color: #616161;
+  --white-color: #ffffff;
+  /* --box-shadow:; */
+  /*========== Font and typography ==========*/
+  --body-font: "Urbanist", sans-serif;
+  --title-font: "Urbanist", sans-serif;
+  --p-font: "Urbanist", sans-serif;
+  --title-font-size: 30px;
+  --p-font-size: 18px;
+
+  --sec-title-font: 25px;
+  --p-font: 18px;
+  --m-title: 30.25px;
+  --l-title: 36.79px;
+  --p-font-height: 150%;
+  --lp-font-height: 150%;
+  --title-font: 42px;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== Margin ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-
 /* ==================CSS Variable END========= */
-
 
 /*========== BASE ==========*/
 
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
+#root{
+  background: url('../img/bg.png');
+}
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: var(--p-font);
-    font-weight: 400;
-    font-family: var(--body-font);
-    line-height: var(--p-font-height);
-    overflow-x: hidden;
-    background-color: #f1f1f1;
+  font-size: var(--p-font);
+  font-weight: 400;
+  font-family: var(--body-font);
+  line-height: var(--p-font-height);
+  overflow-x: hidden;
 }
 
 img {
-    vertical-align: middle;
-    height: auto;
+  vertical-align: middle;
+  height: auto;
 }
 
 a {
-    text-decoration: none;
-    display: inline-block;
+  text-decoration: none;
+  display: inline-block;
 }
 
 a:hover {
-    text-decoration: none;
-    color: var(--main-color);
+  text-decoration: none;
+  color: var(--main-color);
 }
 
 ul,
 ol {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
-
 
 /* ============================GENERAL STYLE END======= */
 
@@ -103,112 +124,115 @@ ul,
 li,
 span,
 label {
-    margin: 0;
+  margin: 0;
 }
 
 .ovh {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 table.table {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .custom-btn {
-    background-image: linear-gradient(to right, #00d3c5, #5c65e1);
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 50px;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    padding: 10px 25px;
-    white-space: nowrap;
+  background: var(--second-color);
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 10px 25px;
+  white-space: nowrap;
 }
 
 .custom-btn:hover,
 .custom-btn-alt:hover {
-    background-position: 100% 0;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    color: var(--white-color);
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: var(--main-color);
+  background: var(--second-color);
 }
 
 .custom-btn-alt {
-    background-image: linear-gradient(to right, #a605f8, #fd7972);
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 201px;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    padding: 10px 25px;
+  background: var(--main-color);
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 201px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 10px 25px;
 }
 
 .btn:focus {
-    outline: 0px;
-    box-shadow: none;
+  outline: 0px;
+  box-shadow: none;
 }
 
 .cpy-6 {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 .cpt-6 {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .cpb-6 {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .cpy-8 {
-    padding-top: 100px;
-    padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 .cpt-8 {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .cpy-5 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .cpt-5 {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .cpy-4 {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .cpy-3 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .cpy-2 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .cpys-2 {
-    padding-top: 30px;
+  padding-top: 30px;
 }
-.mb-3{
-    margin-bottom: 30px;
+.mb-3 {
+  margin-bottom: 30px;
+}
+.mb-5 {
+  margin-bottom: 50px;
 }

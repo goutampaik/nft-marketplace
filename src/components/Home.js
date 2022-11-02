@@ -1,23 +1,35 @@
-import React from "react";
+// import React from "react";
+import React, { useRef, useState } from "react";
+import Countdown from 'react-countdown';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./swiper-styles.css";
+import { Pagination } from "swiper";
+import "swiper/swiper.min.css";
 
 function Home() {
+const countdownTime = 500000;
+  const Completionist = () => <span>Time is Over</span>;
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <Completionist />;
+    } else {
+      // Render a countdown
+      return <span className="countdown-time">{days}:{hours}:{minutes}:{seconds}</span>;
+    }
+  };
   return (
     <>
       {/* <!-- ===========banner================== --> */}
-      <div className="banner">
-        <div className="container-fluid px-0">
-          <div className="grid-row">
-            <div className="grid-4">
-              <div className="banner-img">
-                <img src="assets/img/banner/1.png" alt="" />
-              </div>
-            </div>
-            <div className="grid-4">
-              <div className="banner-content">
+      <section className="intro">
+        <div className="container">
+          <div className="intro-inner">
+            <div className="intro-left">
+            <div className="banner-content">
                 <div className="banner-content-inner">
                   <h1 className="hero-title">
                     Discover collect And Sell your favorite digital NTFs
-            
                   </h1>
                   <p className="banner-des">
                     Quis autem vel eum iure reprehenderit qui in ea voluptates
@@ -36,347 +48,472 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="grid-4">
-              <div className="banner-img-right">
-                <img src="assets/img/banner/2.png" alt="" />
-              </div>
+            <div className="intro-right">
+            <img src="assets/img/banner/cartoon-nimation.webp" alt="" />
             </div>
           </div>
         </div>
-      </div>
-      {/* <!-- ============== Latest Product============= --> */}
-      <section>
-        <div className="latest-product cpy-6">
-          <div className="container">
-            <div className="row">
-              <div className="section-title">
-                <h2>Live Auctions</h2>
-                <p>Most popular gaming digital nft market place</p>
+      </section>
+
+
+      
+      {/* <!-- ============== Swiper Slider Start============= --> */}
+      <section className="slider">
+        <div className="container">
+          <div className="row">
+            <div className="section-title">
+              <div className="sec-title-left mb-5">
+              <h2>Live Auctions</h2>
+              <p>Most popular gaming digital nft market place</p>
               </div>
             </div>
+          </div>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/1.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
 
-            <div className="content-area cpt-5">
-              <div className="latest-product-slider">
-                <div className="swiper product-slider">
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="product-card">
-                        <div className="product-card-inner">
-                          <div className="product-image">
-                            <img src="assets/img/product/1.png" alt="" />
-                            <a href="" className="custom-btn">
-                              <i className="icofont-telegram"></i>
-                              <span>Place Bid</span>
-                            </a>
-
-                            <div
-                              data-countdown="2023/01/01"
-                              className="timer-area"
-                            >
-                              <div className="timer">
-                                <div className="day date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="hour date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="min date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="sec date-style"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="product-details">
-                            <div className="cp-type">
-                              <span>NTF</span>
-                            </div>
-                            <a href="" className="product-name">
-                              "3D Space Rocket With Smoke Premium"
-                            </a>
-                            <div className="author-info">
-                              <div className="author-image">
-                                <img src="assets/img/user/1.png" alt="" />
-                              </div>
-                              <div className="author-name">
-                                <a href="">
-                                  <span>
-                                    <span>NFT Constracter</span>
-                                  </span>
-                                </a>
-                                <p className="author-title">Creator</p>
-                              </div>
-                            </div>
-                            <div className="price-area">
-                              <p>Current Bid</p>
-                              <div className="price">
-                                <h5>5.23 ETH</h5>
-                                <p>= $32.420</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <div data-countdown="2023/01/01" className="timer-area">
+                      <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                       </div>
                     </div>
-                    <div className="swiper-slide">
-                      <div className="product-card">
-                        <div className="product-card-inner">
-                          <div className="product-image">
-                            <img src="assets/img/product/2.png" alt="" />
-                            <a href="" className="custom-btn">
-                              <i className="icofont-telegram"></i>
-                              <span>Place Bid</span>
-                            </a>
-
-                            <div
-                              data-countdown="2023/05/01"
-                              className="timer-area"
-                            >
-                              <div className="timer">
-                                <div className="day date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="hour date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="min date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="sec date-style"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="product-details">
-                            <div className="cp-type">
-                              <span>NTF</span>
-                            </div>
-                            <a href="" className="product-name">
-                              "3D Space Rocket With Smoke Premium"
-                            </a>
-                            <div className="author-info">
-                              <div className="author-image">
-                                <img src="assets/img/user/2.png" alt="" />
-                              </div>
-                              <div className="author-name">
-                                <a href="">
-                                  <span>
-                                    <span>NFT Constracter</span>
-                                  </span>
-                                </a>
-                                <p className="author-title">Creator</p>
-                              </div>
-                            </div>
-                            <div className="price-area">
-                              <p>Current Bid</p>
-                              <div className="price">
-                                <h5>5.23 ETH</h5>
-                                <p>= $32.420</p>
-                              </div>
-                            </div>
-                          </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/1.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
                         </div>
                       </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="product-card">
-                        <div className="product-card-inner">
-                          <div className="product-image">
-                            <img src="assets/img/product/3.png" alt="" />
-                            <a href="" className="custom-btn">
-                              <i className="icofont-telegram"></i>
-                              <span>Place Bid</span>
-                            </a>
-
-                            <div
-                              data-countdown="2023/03/01"
-                              className="timer-area"
-                            >
-                              <div className="timer">
-                                <div className="day date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="hour date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="min date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="sec date-style"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="product-details">
-                            <div className="cp-type">
-                              <span>NTF</span>
-                            </div>
-                            <a href="" className="product-name">
-                              "3D Space Rocket With Smoke Premium"
-                            </a>
-                            <div className="author-info">
-                              <div className="author-image">
-                                <img src="assets/img/user/3.png" alt="" />
-                              </div>
-                              <div className="author-name">
-                                <a href="">
-                                  <span>
-                                    <span>NFT Constracter</span>
-                                  </span>
-                                </a>
-                                <p className="author-title">Creator</p>
-                              </div>
-                            </div>
-                            <div className="price-area">
-                              <p>Current Bid</p>
-                              <div className="price">
-                                <h5>5.23 ETH</h5>
-                                <p>= $32.420</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="product-card">
-                        <div className="product-card-inner">
-                          <div className="product-image">
-                            <img src="assets/img/product/4.png" alt="" />
-                            <a href="" className="custom-btn">
-                              <i className="icofont-telegram"></i>
-                              <span>Place Bid</span>
-                            </a>
-
-                            <div
-                              data-countdown="2023/04/01"
-                              className="timer-area"
-                            >
-                              <div className="timer">
-                                <div className="day date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="hour date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="min date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="sec date-style"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="product-details">
-                            <div className="cp-type">
-                              <span>NTF</span>
-                            </div>
-                            <a href="" className="product-name">
-                              "3D Space Rocket With Smoke Premium"
-                            </a>
-                            <div className="author-info">
-                              <div className="author-image">
-                                <img src="assets/img/user/4.png" alt="" />
-                              </div>
-                              <div className="author-name">
-                                <a href="">
-                                  <span>
-                                    <span>NFT Constracter</span>
-                                  </span>
-                                </a>
-                                <p className="author-title">Creator</p>
-                              </div>
-                            </div>
-                            <div className="price-area">
-                              <p>Current Bid</p>
-                              <div className="price">
-                                <h5>5.23 ETH</h5>
-                                <p>= $32.420</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="product-card">
-                        <div className="product-card-inner">
-                          <div className="product-image">
-                            <img src="assets/img/product/5.png" alt="" />
-                            <a href="" className="custom-btn">
-                              <i className="icofont-telegram"></i>
-                              <span>Place Bid</span>
-                            </a>
-
-                            <div
-                              data-countdown="2023/05/01"
-                              className="timer-area"
-                            >
-                              <div className="timer">
-                                <div className="day date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="hour date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="min date-style"></div>
-                              </div>
-                              :
-                              <div className="timer">
-                                <div className="sec date-style"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="product-details">
-                            <div className="cp-type">
-                              <span>NTF</span>
-                            </div>
-                            <a href="" className="product-name">
-                              "3D Space Rocket With Smoke Premium"
-                            </a>
-                            <div className="author-info">
-                              <div className="author-image">
-                                <img src="assets/img/user/5.png" alt="" />
-                              </div>
-                              <div className="author-name">
-                                <a href="">
-                                  <span>
-                                    <span>NFT Constracter</span>
-                                  </span>
-                                </a>
-                                <p className="author-title">Creator</p>
-                              </div>
-                            </div>
-                            <div className="price-area">
-                              <p>Current Bid</p>
-                              <div className="price">
-                                <h5>5.23 ETH</h5>
-                                <p>= $32.420</p>
-                              </div>
-                            </div>
-                          </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/2.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
+
+                      <div data-countdown="2023/05/01" className="timer-area">
+                      <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
+                      </div>
+                    </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/2.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
+                        </div>
+                      </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/3.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
+
+                      <div data-countdown="2023/03/01" className="timer-area">
+                      <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
+                      </div>
+                    </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/3.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
+                        </div>
+                      </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/4.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
+
+                      <div data-countdown="2023/04/01" className="timer-area">
+                      <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
+                      </div>
+                    </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/4.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
+                        </div>
+                      </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/5.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
+
+                      <div data-countdown="2023/05/01" className="timer-area">
+                        <div className="timer">
+                          <div className="day date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="hour date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="min date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="sec date-style"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/5.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
+                        </div>
+                      </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/5.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
+
+                      <div data-countdown="2023/05/01" className="timer-area">
+                        <div className="timer">
+                          <div className="day date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="hour date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="min date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="sec date-style"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/5.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
+                        </div>
+                      </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/1.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
+
+                      <div data-countdown="2023/01/01" className="timer-area">
+                        <div className="timer">
+                          <div className="day date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="hour date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="min date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="sec date-style"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/1.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
+                        </div>
+                      </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide">
+                <div className="product-card">
+                  <div className="product-card-inner">
+                    <div className="product-image">
+                      <img src="assets/img/product/2.png" alt="" />
+                      <a href="" className="custom-btn">
+                        <i className="icofont-telegram"></i>
+                        <span>Place Bid</span>
+                      </a>
+
+                      <div data-countdown="2023/05/01" className="timer-area">
+                        <div className="timer">
+                          <div className="day date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="hour date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="min date-style"></div>
+                        </div>
+                        :
+                        <div className="timer">
+                          <div className="sec date-style"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-details">
+                      <div className="cp-type">
+                        <span>NTF</span>
+                      </div>
+                      <a href="" className="product-name">
+                        "3D Space Rocket With Smoke Premium"
+                      </a>
+                      <div className="author-info">
+                        <div className="author-image">
+                          <img src="assets/img/user/2.png" alt="" />
+                        </div>
+                        <div className="author-name">
+                          <a href="">
+                            <span>
+                              <span>NFT Constracter</span>
+                            </span>
+                          </a>
+                          <p className="author-title">Creator</p>
+                        </div>
+                      </div>
+                      <div className="price-area">
+                        <p>Current Bid</p>
+                        <div className="price">
+                          <h5>5.23 ETH</h5>
+                          <p>= $32.420</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
-      {/* <!-- ============== Latest Product end ============= --> */}
+
+      {/* <!-- ============== Swiper Slider End============= --> */}
       {/* <!-- ================live action============ --> */}
       <section>
         <div className="live-action">
@@ -623,21 +760,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/01" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">
@@ -680,21 +803,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/05" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">
@@ -737,21 +846,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/07" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">
@@ -796,21 +891,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/08" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">
@@ -855,21 +936,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/09" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">
@@ -914,21 +981,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/09" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">
@@ -973,21 +1026,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/11" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">
@@ -1032,21 +1071,7 @@ function Home() {
                         </a>
 
                         <div data-countdown="2023/05/11" className="timer-area">
-                          <div className="timer">
-                            <div className="day date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="hour date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="min date-style"></div>
-                          </div>
-                          :
-                          <div className="timer">
-                            <div className="sec date-style"></div>
-                          </div>
+                        <Countdown date={Date.now() + countdownTime} renderer={renderer}/>
                         </div>
                       </div>
                       <div className="product-details">

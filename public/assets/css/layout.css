@@ -1,11 +1,21 @@
 /* For maintain structur  */
-
-.swiper-wrapper {
-  width: 24% !important;
-  gap: 20px !important;
+.slider{
+  padding: 80px 0;
+}
+.search-box .search-form .form-control::placeholder{
+  color: var(--title-color);
 }
 .hero-button-area a {
   margin: 0 5px !important;
+}
+.countdown-time{
+  color: #FFFFFF;
+  font-size: 25px;
+  font-family: var(--title-font);
+  font-weight: 300;
+}
+.opensea-logo{
+  display: none;
 }
 /* Navigation Section  */
 nav.navigation {
@@ -70,7 +80,7 @@ form.search-form {
 }
 
 a.nav-link {
-  color: var(--second-color);
+  color: var(--nav-color);
   padding: 8px 22px;
   font-weight: 700;
   font-size: 18px;
@@ -93,7 +103,7 @@ header.header.navbar-fixed {
 }
 
 .search-input::placeholder {
-  color: var(--white-color);
+  color: var(--nav-color);
 }
 
 .dp-menu {
@@ -214,15 +224,16 @@ li.nav-list:hover .dp-menu {
     align-items: center;
     position: fixed;
     height: 100vh;
-    background: #ffffffe3;
+    background: #ffffff;
     bottom: 0;
-    width: 300px;
+    width: 100%;
     box-shadow: -2px 5px 13px 0px #0b0c11;
-    top: 0;
+    top: 74px;
     padding: 30px 20px;
     transition: 0.5s;
     right: -125%;
     backdrop-filter: blur(3px);
+    z-index: 100;
   }
   a.nav-link {
     padding-left: 0;
@@ -306,15 +317,17 @@ a.footer-link:hover {
   border-radius: 0;
   background: #10101000;
   border: 1px solid #d7d7d745;
-  color: var(--second-color);
+  color: var(--title-color);
   padding: 10px;
   border-radius: 10px;
 }
-
+.form-control::placeholder{
+  color: var(--title-color);
+}
 .form-control:focus {
   background: #10101000;
-  border-color: var(--main-color);
-  color: var(--second-color);
+  border-color: var(--title-color);
+  color: var(--title-color);
   outline: 0;
   box-shadow: none;
 }
@@ -396,10 +409,11 @@ button.subscribe-btn {
 
 .sec-top h3 {
   font-weight: 700;
+  color: var(--white-color);
 }
 
 a.internal-link {
-  color: #484848;
+  color: var(--white-color);
   padding: 10px 0;
   font-weight: 500;
   transition: 0.3s;
@@ -407,7 +421,7 @@ a.internal-link {
 
 .footer-area {
   padding-top: 200px;
-  background: #fff;
+  background:var(--footer-bg);
 }
 
 ul.blog-list li img {
@@ -428,7 +442,7 @@ ul.blog-list li {
 a.post-title {
   font-weight: 600;
   /* font-size: 20px; */
-  color: var(--second-color);
+  color: var(--white-color);
   line-height: 25px;
   transition: 0.3s;
 }
@@ -449,7 +463,7 @@ p.date {
 
 .social-logo p {
   font-size: 17px;
-  color: var(--second-color);
+  color: var(--white-color);
   font-weight: 500;
 }
 
