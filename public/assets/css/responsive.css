@@ -558,3 +558,30 @@ width: 80%;
     width: 100px;
   }
 }
+
+/* ======================= Rankings start========================== */
+@media screen and (max-width: 550px) {
+    
+  .collection-head {
+      margin-bottom: 40px;
+      flex-direction: column;
+     gap: 20px 0;
+     width: 100%;
+  }
+  .collection-left{
+      display: flex;
+      align-items: center;
+  gap: 0 10px;
+      width: 100%;
+  }
+  .collection-left-item{
+      width: 60%;
+  
+  }
+  .collection-left-item a{
+      display: flex;
+      align-items: center;
+      padding: 10px 10px;
+    
+  }
+    }

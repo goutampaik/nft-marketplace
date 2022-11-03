@@ -6,6 +6,8 @@ import Mission from "./components/Mission";
 import TopSeller from "./components/Top-Seller";
 import AllAuthor from "./components/All-Author";
 import Blog from "./components/Blog";
+import Rankings from "./components/Rankings";
+import Activity from "./components/Activity";
 import WalletConnect from "./components/Wallet-Connect";
 import BlogDetails from "./components/Blog-Details";
 import Collection from "./components/Collection";
@@ -40,6 +42,12 @@ function App() {
           </Route>
           <Route exact path="/blog">
             <Blog />
+          </Route>
+          <Route exact path="/rankings">
+            <Rankings />
+          </Route>
+          <Route exact path="/activity">
+            <Activity />
           </Route>
           <Route exact path="/wallet-connect">
             <WalletConnect />

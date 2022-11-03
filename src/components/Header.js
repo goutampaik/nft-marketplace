@@ -30,7 +30,7 @@ function Header() {
           <nav className="navigation">
             <div className="logo">
               <div className="opensea-logo">
-              <img src="assets/img/opensea.png" alt="" />
+                <img src="assets/img/opensea.png" alt="" />
               </div>
             </div>
             <div className="search-box">
@@ -46,7 +46,10 @@ function Header() {
               </form>
             </div>
             <div className={`menu ${sidebarActive ? "active" : ""}`}>
-              <div className="close-menu" onClick={() => setSidebarActive(false)}>
+              <div
+                className="close-menu"
+                onClick={() => setSidebarActive(false)}
+              >
                 <i className="icofont-close"></i>
               </div>
               <ul className="menu-nav-ul">
@@ -55,18 +58,37 @@ function Header() {
                     Home
                   </a>
                 </li>
-                <li className="nav-list">
-                  <Link className="nav-link" to="Mission">
-                    Activity
-                  </Link>
+                <li className="nav-list nav-pages">
+                  {" "}
+                  <a className="nav-link">Stats</a>
+                  <ul className="nav-pages-list">
+                    <li>
+                      <Link to="Activity" onClick={_toggleSidebar}>
+                        Activity
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="Rankings" onClick={_toggleSidebar}>
+                        Rankings
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
                 <li className="nav-list">
-                  <Link className="nav-link" to="Wallet-Connect" onClick={_toggleSidebar}>
+                  <Link
+                    className="nav-link"
+                    to="Wallet-Connect"
+                    onClick={_toggleSidebar}
+                  >
                     Wallet
                   </Link>
                 </li>
                 <li className="nav-list">
-                  <Link className="nav-link" to="All-Author" onClick={_toggleSidebar}>
+                  <Link
+                    className="nav-link"
+                    to="All-Author"
+                    onClick={_toggleSidebar}
+                  >
                     Author
                   </Link>
                 </li>
@@ -83,16 +105,29 @@ function Header() {
                   </a>
                   <ul className="nav-pages-list">
                     <li>
-                      <Link to="Top-Seller" onClick={_toggleSidebar}>Top Sellers</Link>
+                      <Link to="Top-Seller" onClick={_toggleSidebar}>
+                        Top Sellers
+                      </Link>
                     </li>
                     <li>
-                      <Link to="Collection" onClick={_toggleSidebar}>Collection</Link>
+                      <Link to="Collection" onClick={_toggleSidebar}>
+                        Collection
+                      </Link>
                     </li>
                     <li>
-                      <Link to="Sellers" onClick={_toggleSidebar}>Sellers</Link>
+                      <Link to="Sellers" onClick={_toggleSidebar}>
+                        Sellers
+                      </Link>
                     </li>
                     <li>
-                      <Link to="Dashboard" onClick={_toggleSidebar}>Dashboard</Link>
+                      <Link to="Dashboard" onClick={_toggleSidebar}>
+                        Dashboard
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="Mission" onClick={_toggleSidebar}>
+                        Mission
+                      </Link>
                     </li>
                   </ul>
                 </li>
