@@ -1,9 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import Subscribe from "./Subscribe";
 import Faqs from "react-faq-component";
+import {Switch} from 'antd';
 
 function CreateCollection() {
+
+    const [toggle, setToggle]=useState(false);
+    const toggler=()=>{
+        toggle? setToggle(false):setToggle(true);
+    }
 
   return (
     <>
@@ -89,8 +95,8 @@ function CreateCollection() {
                             </div> 
                             <div class="collection-input-item">
                                <div class="explisitict-content">
-                                    <div class="explisitict-box">
-                                        <div class="round-box"></div>
+                                    <div className="switch-btn">
+                                        <Switch onClick={toggler}/>
                                     </div>
                                     <p>Explisitict and sensitive content</p>
                                </div>
