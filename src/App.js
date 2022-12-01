@@ -6,11 +6,18 @@ import Mission from "./components/Mission";
 import TopSeller from "./components/Top-Seller";
 import AllAuthor from "./components/All-Author";
 import Blog from "./components/Blog";
+import Faq from "./components/Faq";
+import Support from "./components/Support";
+import Help from "./components/Help";
+import Subscribe from "./components/Subscribe";
+import Profile from "./components/Profile";
+import EditProfile from "./components/EditProfile";
 import Rankings from "./components/Rankings";
 import Activity from "./components/Activity";
 import WalletConnect from "./components/Wallet-Connect";
 import BlogDetails from "./components/Blog-Details";
 import Collection from "./components/Collection";
+import CreateCollection from "./components/CreateCollection";
 import Sellers from "./components/Sellers";
 import Dashboard from "./components/users/Dashboard";
 import Bids from "./components/users/Bids";
@@ -43,6 +50,24 @@ function App() {
           <Route exact path="/blog">
             <Blog />
           </Route>
+          <Route exact path="/faq">
+            <Faq />
+          </Route>
+          <Route exact path="/support">
+            <Support />
+          </Route>
+          <Route exact path="/help">
+            <Help />
+          </Route>
+          <Route exact path="/subscribe">
+            <Subscribe />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
+          <Route exact path="/edit-profile">
+            <EditProfile />
+          </Route>
           <Route exact path="/rankings">
             <Rankings />
           </Route>
@@ -57,6 +82,9 @@ function App() {
           </Route>
           <Route exact path="/collection">
             <Collection />
+          </Route>
+          <Route exact path="/create-collection">
+            <CreateCollection />
           </Route>
           <Route exact path="/sellers">
             <Sellers />

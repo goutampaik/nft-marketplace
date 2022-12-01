@@ -585,3 +585,157 @@ width: 80%;
     
   }
     }
+
+    /* ======================= FAQ Start========================== */
+
+    @media screen and (max-width: 912px){
+      .faqs-con{
+        width: 100%;
+      }
+    }
+
+    /* <!-- =================== Profile section start======================= -->  */
+@media screen and (max-width: 992px) {
+
+  .profile-card-btn{
+      overflow-x: scroll;
+      overflow-y: hidden;
+  }
+  
+  }
+  @media screen and (max-width: 770px) {
+      .profile-warrper {
+          width: 100%;
+          margin: auto;
+      }
+      .profile-image img {
+      width: 106px;
+      height: 123px;
+  }
+  .profile-header {
+      text-align: center;
+      margin-top: -25px;
+      gap: 15px;
+  }
+  .profile-header h4 {
+      font-size: 20px;
+  }
+  .profile-header p{
+      font-size: 15px;
+      font-weight: 700;
+      color: #131740;
+  }
+  .profile-box{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+  .profile-boxss{
+      display: flex;
+      gap: 10px;
+  }
+  }
+  /* <!-- =================== Profile section End======================= -->  */
+  
+  /* <!-- =================== Help Section start======================= --> */
+  @media screen and (max-width: 900px) {
+      .help-header{
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          display: grid;
+          gap: 20px;
+      }
+      .help-search-btn button{
+          border:none;
+          background: #EB4D3D;
+          border-radius: 0px 12px 12px 0px;
+          width: 60px;
+          height: 50px;
+      }
+  }
+  /* <!-- =================== Help Section end======================= --> */
+  
+  
+  /* <!-- =================== Contacts Section start======================= --> */
+  @media screen and (max-width: 500px) {
+      .contact-item-btn button{
+          padding: 15px;
+      }
+      .contact-left{
+          padding: 0 10px;
+          margin-bottom: 50px;
+      }
+      .join-items{
+          padding: 15px;
+      }
+      .contact-right{
+          padding: 0 10px;  
+      }
+  }
+
+  /* =================edit-profile-responsive  */
+@media screen and (max-width: 992px) {
+  section.edit-profile {
+      padding: 70px 0 100px 0;
+  }
+  .edit-profile .row{
+      flex-direction: column-reverse;
+      width: 100%;
+  }
+  .edit-profile-wrapper {
+      width: 100%;
+      margin: auto;
+  }
+  .edit-profile-right{
+     margin-bottom: 30px;
+  }
+  .edit-profile-left {
+      padding-right: 0px;
+  }
+  }
+
+  /* <!--==================== Create-Collection-responsive start============== --> */
+@media screen and (max-width: 992px) {
+  .create-collection {
+    padding: 70px 0 100px 0;
+  }
+  .collection-image-item {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 50px;
+    margin: auto;
+  }
+  .create-collection-right {
+    width: 100%;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .create-collection {
+    padding: 50px 0 70px 0;
+  }
+  .collection-image-item {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    margin: auto;
+  }
+  .create-collection-right {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .create-collection-right
+    .collection-form
+    .collection-input-item
+    .collection-input {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+/* <!--==================== Create-Collection-responsive  End============== --> */

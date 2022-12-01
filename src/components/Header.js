@@ -106,12 +106,17 @@ function Header() {
                   <ul className="nav-pages-list">
                     <li>
                       <Link to="Top-Seller" onClick={_toggleSidebar}>
-                        Top Sellers
+                        Create Item
                       </Link>
                     </li>
                     <li>
                       <Link to="Collection" onClick={_toggleSidebar}>
                         Collection
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="create-collection" onClick={_toggleSidebar}>
+                        Create Collection
                       </Link>
                     </li>
                     <li>
@@ -125,8 +130,33 @@ function Header() {
                       </Link>
                     </li>
                     <li>
+                      <Link to="Profile" onClick={_toggleSidebar}>
+                        Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="edit-profile" onClick={_toggleSidebar}>
+                        Edit Profile
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="Mission" onClick={_toggleSidebar}>
-                        Mission
+                        Nft Details
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="Faq" onClick={_toggleSidebar}>
+                        FAQ
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="Support" onClick={_toggleSidebar}>
+                      Support
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="Help" onClick={_toggleSidebar}>
+                        Help
                       </Link>
                     </li>
                   </ul>
